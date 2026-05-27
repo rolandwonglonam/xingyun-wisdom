@@ -1,6 +1,6 @@
 # 星云智慧 (Xingyun Wisdom)
 
-> 佛学 × AI — 用三层佛学诊断框架做认知诊断的 Claude Code Skill
+> 佛学 × AI — 用三层佛学诊断框架做认知诊断的 AI Skill，原生兼容 Codex 与 Claude Code
 
 ## 这是什么
 
@@ -29,6 +29,20 @@
 
 ## 安装
 
+### Codex
+
+将 `SKILL.md` 和 `skill.json` 放入你的 Codex skills 目录：
+
+```bash
+# 项目外全局安装
+mkdir -p ~/.codex/skills/xingyun-wisdom
+cp SKILL.md skill.json ~/.codex/skills/xingyun-wisdom/
+```
+
+安装后重启 Codex，即可在需要时调用这个 skill。
+
+### Claude Code
+
 将 `INSTRUCTIONS.md` 和 `skill.json` 放入你的 Claude Code skills 目录：
 
 ```bash
@@ -42,6 +56,12 @@ cp INSTRUCTIONS.md skill.json ~/.claude/skills/xingyun-wisdom/
 ```
 
 安装后在 Claude Code 中输入 `/xingyun-wisdom` 即可启动。
+
+## 文件说明
+
+- `SKILL.md`: Codex 原生 skill 入口
+- `INSTRUCTIONS.md`: Claude Code 兼容入口
+- `skill.json`: 元数据与触发条件
 
 ## 使用场景
 
